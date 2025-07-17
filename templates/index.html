@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Alphabet Unlocker</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>PDF Alphabet Unlocker</h1>
+    <form id="unlockForm">
+      <label>Upload PDF:
+        <input type="file" name="file" required>
+      </label><br><br>
+
+      <label>Password Length:
+        <input type="number" name="length" min="1" max="6" value="4" required>
+      </label><br><br>
+
+      <label><input type="radio" name="charset" value="upper"> Uppercase Only (A–Z)</label><br>
+      <label><input type="radio" name="charset" value="lower"> Lowercase Only (a–z)</label><br>
+      <label><input type="radio" name="charset" value="mixed" checked> Mixed Case (a–z + A–Z)</label><br><br>
+
+      <button type="submit">Start</button>
+      <button type="button" onclick="pause()">Pause</button>
+      <button type="button" onclick="resume()">Resume</button>
+      <button type="button" onclick="stop()">Stop</button>
+    </form>
+
+    <div id="status">
+      <p>Current Try: <span id="current"></span></p>
+      <p>Found Password: <span id="found"></span></p>
+    </div>
+
+    <a id="downloadBtn" href="/download" download>Download Unlocked PDF</a>
+  </div>
+</body>
+</html>
