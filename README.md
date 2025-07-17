@@ -36,3 +36,28 @@ A modern brute-force based PDF password unlocker using only alphabetic character
 For example:
 3-letter lowercase: ~ seconds
 5-letter mixed: ⚠️ could take hours depending on system
+
+🧪 Example Encrypted PDFs
+Sample locked PDFs are provided in the samples/ folder for testing:
+uppercase-locked.pdf – password is 4 uppercase letters
+lowercase-locked.pdf – password is 4 lowercase letters
+mixed-locked.pdf – password consists of mixed-case letters
+
+📁 Project Structure
+pdf-unlocker-alphabet-bruteforce/
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   ├── styles.css
+│   └── script.js
+├── uploads/
+├── unlocked/
+├── samples/
+│   ├── uppercase-locked.pdf
+│   ├── lowercase-locked.pdf
+│   └── mixed-locked.pdf
+├── LICENSE
+└── README.md
+
+
